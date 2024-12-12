@@ -180,7 +180,7 @@ class BasePage:
         element = self.wait_for_element(by, value)
         element.click()
 
-    def input_text(self, by, value, text):
+    def type_text(self, by, value, text):
         """
         Waits for the presence of an element, clears its content, and inputs the specified text.
 

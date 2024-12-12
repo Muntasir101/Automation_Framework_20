@@ -8,13 +8,13 @@ def setup():
     if BrowserConfig.BROWSER_NAME == 'chrome':
         chrome_options = webdriver.ChromeOptions()
         if BrowserConfig.HEADLESS_MODE:
-            chrome_options.add_argument('--headless')
+            chrome_options.add_argument('--headed')
         driver = webdriver.Chrome(chrome_options)
 
     elif BrowserConfig.BROWSER_NAME == 'firefox':
         firefox_options = webdriver.FirefoxOptions()
         if BrowserConfig.HEADLESS_MODE:
-            firefox_options.add_argument('--headless')
+            firefox_options.add_argument('--headed')
         driver = webdriver.Chrome(firefox_options)
 
     elif BrowserConfig.BROWSER_NAME == 'edge':
