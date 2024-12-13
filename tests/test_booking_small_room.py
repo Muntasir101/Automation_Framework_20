@@ -9,10 +9,10 @@ def test_small_room_one_hour(setup):
     home_page = HomePage(setup)
     home_page.select_room("Small Room")
     home_page.set_start_time("12", "12", "2024", "12", "00", "PM")
-    base_page.take_full_page_screenshot("E:\\Offline_Batch_20\\Projects\\Automation_Framework_20\\screenshots\\2_set_start_time"
+    base_page.take_screenshot("E:\\Offline_Batch_20\\Projects\\Automation_Framework_20\\screenshots\\2_set_start_time"
                               ".png")
     home_page.set_end_time("12", "12", "2024", "01", "00", "PM")
-    base_page.take_full_page_screenshot(
+    base_page.take_screenshot(
         "E:\\Offline_Batch_20\\Projects\\Automation_Framework_20\\screenshots\\3_set_end_time.png")
 
     home_page.click_room_book_button()
