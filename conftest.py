@@ -15,13 +15,13 @@ def setup():
         firefox_options = webdriver.FirefoxOptions()
         if BrowserConfig.HEADLESS_MODE:
             firefox_options.add_argument('--headed')
-        driver = webdriver.Chrome(firefox_options)
+        driver = webdriver.Firefox(firefox_options)
 
     elif BrowserConfig.BROWSER_NAME == 'edge':
         edge_options = webdriver.EdgeOptions()
         if BrowserConfig.HEADLESS_MODE:
             edge_options.add_argument('--headless')
-        driver = webdriver.Chrome(edge_options)
+        driver = webdriver.Edge(edge_options)
 
     else:
         raise ValueError("Unsupported Browser!!")

@@ -1176,3 +1176,21 @@ class BasePage:
         """
         element = self.wait_for_element(by, value)
         element.send_keys(file_path)
+
+    def take_full_page_screenshot(self, filename):
+        """
+        Takes a full-page screenshot of the current page and saves it to the specified filename.
+
+        Parameters:
+            filename (str): The filename (with path) to save the screenshot.
+
+        Usage:
+            base_page.take_full_page_screenshot("path/to/fullpage_screenshot.png")
+        """
+        # Set window size to full page height dynamically
+        page_width = self.driver.execute_script("return document.body.scrollWidth")
+        page_height = self.driver.execute_script("return document.body.scrollHeight")
+        self.driver.set_window_size(page_width, page_height)
+
+        # Take the screenshot
+        self.driver.save_screenshot(filename)
