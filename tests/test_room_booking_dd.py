@@ -29,6 +29,8 @@ def test_room_cost(setup):
         home_page.set_end_time(end_month, end_day, end_year, end_hour, end_minute, end_time)
         home_page.click_room_book_button()
 
+        base_page.take_full_page_screenshot(os.path.join(base_dir, "screenshots", "small_room.png"))
+
         # Get the actual cost from the web page
         actual_cost = home_page.get_actual_booking_cost()
 
